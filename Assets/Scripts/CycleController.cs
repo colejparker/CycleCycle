@@ -27,10 +27,13 @@ public class CycleController : MonoBehaviour
     public KeyCode down;
     public KeyCode right;
     public KeyCode left;
+    public KeyCode reset;
 
     [SerializeField] float breakForce;
     [SerializeField] float motorForce;
     [SerializeField] float maxSteeringAngle;
+
+    [SerializeField] Transform spawnPoint;
 
     private void Start()
     {
@@ -41,7 +44,7 @@ public class CycleController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //SpawnWall();
+        SpawnWall();
         GetInput();
         HandleMotor();
         HandleSteering();
@@ -64,13 +67,17 @@ public class CycleController : MonoBehaviour
 
     private void HandleSteering()
     {
-        float steeringAngle = maxSteeringAngle * horizontalInput;
-        frontCollider.steerAngle = steeringAngle;
+        //float steeringAngle = maxSteeringAngle * horizontalInput;
+        //frontCollider.steerAngle = steeringAngle;
+
+        Quaternion deltaRotation = Quaternion.Euler(new Vector3(0, horizontalInput * maxSteeringAngle, 0) * Time.deltaTime);
+        rb.MoveRotation(rb.rotation * deltaRotation);
     }
 
     private void HandleMotor()
     {
-        frontCollider.motorTorque = verticalInput * motorForce;
+        //frontCollider.motorTorque = verticalInput * motorForce;
+        rb.AddForce(transform.forward * motorForce*verticalInput);
     }
 
     private void GetInput()
@@ -113,8 +120,27 @@ public class CycleController : MonoBehaviour
             }
         }
 
+        if (Input.GetKeyDown(reset)) //resets player to their spawn point
+        {
+            Respawn();
+        }
 
     }
+
+    private void Respawn()
+    {
+        for (int i = 0; i < walls.Count; i++)
+        {
+            GameObject wallToRemove = walls.Dequeue();
+            Destroy(wallToRemove);
+        }
+        transform.position = spawnPoint.transform.position;
+        transform.rotation = spawnPoint.transform.rotation;
+        rb.velocity = Vector3.zero;
+        horizontalInput = 0;
+        verticalInput = 0;
+    }
+
     public void hitWall()
     {
         print("Hit a wall");
