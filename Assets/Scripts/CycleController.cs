@@ -10,10 +10,14 @@ public class CycleController : MonoBehaviour
 
     [SerializeField] Transform frontTransform;
     [SerializeField] Transform rearTransform;
-    [SerializeField] WheelCollider frontCollider;
-    [SerializeField] WheelCollider rearCollider;
+    [SerializeField] WheelCollider frontLeftCollider;
+    [SerializeField] WheelCollider frontRightCollider;
+    [SerializeField] WheelCollider rearLeftCollider;
+    [SerializeField] WheelCollider rearRightCollider;
 
     Rigidbody rb;
+
+    [SerializeField] float centerOfMass = -5;
 
     [SerializeField] Material playerMaterial;
 
@@ -38,6 +42,7 @@ public class CycleController : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        rb.centerOfMass = new Vector3(0, centerOfMass, 0);
         frontTransform.GetComponent<MeshRenderer>().material = playerMaterial;
         rearTransform.GetComponent<MeshRenderer>().material = playerMaterial;
     }
@@ -120,10 +125,10 @@ public class CycleController : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(reset)) //resets player to their spawn point
-        {
-            Respawn();
-        }
+        //if (Input.GetKeyDown(reset)) //resets player to their spawn point
+        //{
+        //    Respawn();
+        //}
 
     }
 
