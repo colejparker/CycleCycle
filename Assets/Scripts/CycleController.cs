@@ -2,11 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CycleController : MonoBehaviour
 {
     public float horizontalInput;
     public float verticalInput;
+
+    public string nameString;
 
     [SerializeField] Transform frontTransform;
     [SerializeField] Transform rearTransform;
@@ -15,17 +18,30 @@ public class CycleController : MonoBehaviour
     [SerializeField] WheelCollider rearLeftCollider;
     [SerializeField] WheelCollider rearRightCollider;
 
+    [SerializeField] AudioClip deathFX;
+
+    bool isAlive = true;
+
     Rigidbody rb;
+    BoxCollider bc;
 
     [SerializeField] float centerOfMass = -5;
 
-    [SerializeField] Material playerMaterial;
+    public Material playerMaterial;
 
     Queue<GameObject> walls = new Queue<GameObject>();
 
     [SerializeField] int numberOfWalls = 100;
 
     [SerializeField] GameObject WallPrefab;
+
+    [SerializeField] Transform motorcycleObject;
+    [SerializeField] ParticleSystem deathParticles;
+
+    [SerializeField] ScoreCanvas scoreCanvas;
+
+    [SerializeField] List<Image> deaths = new List<Image>();
+    int numOfDeaths = 0;
 
     public KeyCode up;
     public KeyCode down;
@@ -41,6 +57,7 @@ public class CycleController : MonoBehaviour
 
     private void Start()
     {
+        bc = GetComponent<BoxCollider>();
         rb = GetComponent<Rigidbody>();
         rb.centerOfMass = new Vector3(0, centerOfMass, 0);
         frontTransform.GetComponent<MeshRenderer>().material = playerMaterial;
@@ -49,10 +66,13 @@ public class CycleController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        SpawnWall();
-        GetInput();
-        HandleMotor();
-        HandleSteering();
+        if (isAlive)
+        {
+            SpawnWall();
+            GetInput();
+            HandleMotor();
+            HandleSteering();
+        }
     }
 
     private void SpawnWall()
@@ -125,29 +145,81 @@ public class CycleController : MonoBehaviour
             }
         }
 
-        //if (Input.GetKeyDown(reset)) //resets player to their spawn point
-        //{
-        //    Respawn();
-        //}
-
     }
 
     private void Respawn()
     {
+        if (numOfDeaths< deaths.Count)
+        {
+            bc.enabled = true;
+            rb.isKinematic = false;
+            motorcycleObject.gameObject.SetActive(true);
+            isAlive = true;
+            transform.position = spawnPoint.transform.position;
+            transform.rotation = spawnPoint.transform.rotation;
+        }
+    }
+
+    public void Reset()
+    {
+        for (int i = 0; i < deaths.Count; i++)
+        {
+            deaths[i].color = Color.white;
+        }
+        numOfDeaths = 0;
+        Respawn();
+
+    }
+
+
+
+    public void hitWall()
+    {
+        if (numOfDeaths < deaths.Count && isAlive)
+        {
+            GetComponent<AudioSource>().PlayOneShot(deathFX);
+            Freeze();
+            deaths[numOfDeaths].color = playerMaterial.color;
+            numOfDeaths++;
+            ParticleSystem ps = Instantiate(deathParticles, transform.position, Quaternion.identity);
+            ps.GetComponent<ParticleSystemRenderer>().material = playerMaterial;
+            Invoke("Respawn", 2f);
+        }
+        else if (numOfDeaths >= deaths.Count)
+        {
+            GetComponent<AudioSource>().PlayOneShot(deathFX);
+            Freeze();
+            scoreCanvas.PlayerLoses(this);
+            ParticleSystem ps = Instantiate(deathParticles, transform.position, Quaternion.identity);
+            ps.GetComponent<ParticleSystemRenderer>().material = playerMaterial;
+        }
+        
+       
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.GetComponent<Wall>())
+        {
+            hitWall();
+        }
+    }
+
+    public void Freeze()
+    {
+        isAlive = false;
+        motorcycleObject.gameObject.SetActive(false);
         for (int i = 0; i < walls.Count; i++)
         {
             GameObject wallToRemove = walls.Dequeue();
             Destroy(wallToRemove);
         }
-        transform.position = spawnPoint.transform.position;
-        transform.rotation = spawnPoint.transform.rotation;
         rb.velocity = Vector3.zero;
         horizontalInput = 0;
         verticalInput = 0;
+        bc.enabled = false;
+        rb.isKinematic = true;
     }
 
-    public void hitWall()
-    {
-        print("Hit a wall");
-    }
+
+
 }
