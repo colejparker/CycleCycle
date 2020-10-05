@@ -69,8 +69,6 @@ public class CycleController : MonoBehaviour
             SpawnWall();
             GetInput();
             MoveBike();
-            //HandleMotor();
-            //HandleSteering();
         }
     }
 
