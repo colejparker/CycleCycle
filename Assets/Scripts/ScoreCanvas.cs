@@ -20,16 +20,17 @@ public class ScoreCanvas : MonoBehaviour
 
     public void PlayerLoses(CycleController losingPlayer)
     {
+        print("Calling:");
         PlayAgain.gameObject.SetActive(true);
         player1.Freeze();
         player2.Freeze();
         if (losingPlayer == player1)
         {
-            playerWinsText.text = "Player 2 Wins!";
+            playerWinsText.text = player2.nameString + " Wins!";
             playerWinsText.color = player2.playerMaterial.color;
         } else
         {
-            playerWinsText.text = "Player 1 Wins!";
+            playerWinsText.text = player1.nameString + " Wins!";
             playerWinsText.color = player1.playerMaterial.color;
 
         }

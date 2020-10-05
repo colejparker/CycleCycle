@@ -11,6 +11,8 @@ public class CycleController : MonoBehaviour
 
     public string nameString;
 
+    [SerializeField] CycleController opposingPlayer;
+
     [SerializeField] Transform frontTransform;
     [SerializeField] Transform rearTransform;
     [SerializeField] WheelCollider frontLeftCollider;
@@ -40,8 +42,8 @@ public class CycleController : MonoBehaviour
 
     [SerializeField] ScoreCanvas scoreCanvas;
 
-    [SerializeField] List<Image> deaths = new List<Image>();
-    int numOfDeaths = 0;
+    [SerializeField] List<Image> wins = new List<Image>();
+    int numOfWins = 0;
 
     public KeyCode up;
     public KeyCode down;
@@ -149,7 +151,7 @@ public class CycleController : MonoBehaviour
 
     private void Respawn()
     {
-        if (numOfDeaths< deaths.Count)
+        if (numOfWins< wins.Count)
         {
             bc.enabled = true;
             rb.isKinematic = false;
@@ -162,38 +164,41 @@ public class CycleController : MonoBehaviour
 
     public void Reset()
     {
-        for (int i = 0; i < deaths.Count; i++)
+        for (int i = 0; i < wins.Count; i++)
         {
-            deaths[i].color = Color.white;
+            wins[i].color = Color.white;
         }
-        numOfDeaths = 0;
+        numOfWins = 0;
         Respawn();
 
     }
 
-
+    public void GainPoint()
+    {
+        numOfWins++;
+        if (numOfWins < wins.Count)
+        {
+            wins[numOfWins-1].color = playerMaterial.color;
+        }
+        else
+        {
+            wins[numOfWins - 1].color = playerMaterial.color;
+            scoreCanvas.PlayerLoses(opposingPlayer);
+        }
+    }
 
     public void hitWall()
     {
-        if (numOfDeaths < deaths.Count && isAlive)
+        if (isAlive)
         {
             GetComponent<AudioSource>().PlayOneShot(deathFX);
             Freeze();
-            deaths[numOfDeaths].color = playerMaterial.color;
-            numOfDeaths++;
-            ParticleSystem ps = Instantiate(deathParticles, transform.position, Quaternion.identity);
-            ps.GetComponent<ParticleSystemRenderer>().material = playerMaterial;
-            Invoke("Respawn", 2f);
+            opposingPlayer.GainPoint();
+            if (opposingPlayer.numOfWins < opposingPlayer.wins.Count)
+            {
+                Invoke("Respawn", 2f);
+            }
         }
-        else if (numOfDeaths >= deaths.Count)
-        {
-            GetComponent<AudioSource>().PlayOneShot(deathFX);
-            Freeze();
-            scoreCanvas.PlayerLoses(this);
-            ParticleSystem ps = Instantiate(deathParticles, transform.position, Quaternion.identity);
-            ps.GetComponent<ParticleSystemRenderer>().material = playerMaterial;
-        }
-        
        
     }
     private void OnCollisionEnter(Collision collision)
