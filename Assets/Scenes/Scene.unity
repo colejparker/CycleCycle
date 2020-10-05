@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 11603911}
   - component: {fileID: 11603913}
   m_Layer: 0
-  m_Name: Image
+  m_Name: W
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -381,7 +381,7 @@ GameObject:
   - component: {fileID: 37555753}
   - component: {fileID: 37555752}
   m_Layer: 0
-  m_Name: Terrain (5)
+  m_Name: Terrain6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -458,7 +458,7 @@ GameObject:
   - component: {fileID: 37863333}
   - component: {fileID: 37863335}
   m_Layer: 0
-  m_Name: Image (3)
+  m_Name: D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -548,7 +548,7 @@ GameObject:
   - component: {fileID: 92144371}
   - component: {fileID: 92144370}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: p2w1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -623,7 +623,7 @@ GameObject:
   - component: {fileID: 116603760}
   - component: {fileID: 116603759}
   m_Layer: 5
-  m_Name: Image (3)
+  m_Name: p1w3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -851,7 +851,7 @@ GameObject:
   - component: {fileID: 402345611}
   - component: {fileID: 402345610}
   m_Layer: 0
-  m_Name: Terrain (6)
+  m_Name: Terrain7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -984,7 +984,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: b9ea4a3a9b3825b4f8d4c2721df2dc24, type: 2}
     - target: {fileID: 919132149155446097, guid: ec8c5f3fd4d0e7948ae951d7b1782989, type: 3}
       propertyPath: m_Name
-      value: halfsphere (1)
+      value: halfsphere2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec8c5f3fd4d0e7948ae951d7b1782989, type: 3}
@@ -1000,7 +1000,7 @@ GameObject:
   - component: {fileID: 430401184}
   - component: {fileID: 430401183}
   m_Layer: 0
-  m_Name: Terrain (2)
+  m_Name: Terrain3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1345,7 +1345,7 @@ GameObject:
   - component: {fileID: 539431609}
   - component: {fileID: 539431608}
   m_Layer: 0
-  m_Name: Button
+  m_Name: PlayAgainButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1476,7 +1476,7 @@ GameObject:
   - component: {fileID: 557819511}
   - component: {fileID: 557819510}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: BackgroundTransparent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1722,7 +1722,7 @@ GameObject:
   - component: {fileID: 751993883}
   - component: {fileID: 751993882}
   m_Layer: 0
-  m_Name: Terrain (4)
+  m_Name: Terrain5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1931,7 +1931,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6586409701906331481, guid: 45cf9f140f6b29446ae0bfeae61192b4, type: 3}
       propertyPath: motorForce
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6586409701906331481, guid: 45cf9f140f6b29446ae0bfeae61192b4, type: 3}
       propertyPath: maxSteeringAngle
@@ -2088,7 +2088,7 @@ GameObject:
   - component: {fileID: 768145042}
   - component: {fileID: 768145041}
   m_Layer: 5
-  m_Name: Image
+  m_Name: BackgroundOpaque
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2357,7 +2357,7 @@ GameObject:
   - component: {fileID: 843319429}
   - component: {fileID: 843319431}
   m_Layer: 0
-  m_Name: Image (7)
+  m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2447,7 +2447,7 @@ GameObject:
   - component: {fileID: 864710830}
   - component: {fileID: 864710829}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: BackgroundTransparent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2979,7 +2979,7 @@ GameObject:
   - component: {fileID: 921011350}
   - component: {fileID: 921011352}
   m_Layer: 0
-  m_Name: Image (5)
+  m_Name: Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3070,7 +3070,7 @@ GameObject:
   - component: {fileID: 942449674}
   - component: {fileID: 942449676}
   m_Layer: 0
-  m_Name: Image (4)
+  m_Name: Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3160,7 +3160,7 @@ GameObject:
   - component: {fileID: 951979765}
   - component: {fileID: 951979764}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: WinnerText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3379,7 +3379,7 @@ GameObject:
   - component: {fileID: 996163943}
   - component: {fileID: 996163942}
   m_Layer: 0
-  m_Name: Button
+  m_Name: PlayGameButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3696,7 +3696,7 @@ GameObject:
   - component: {fileID: 1049905215}
   - component: {fileID: 1049905214}
   m_Layer: 5
-  m_Name: Image (4)
+  m_Name: p2w2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3778,7 +3778,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1055617355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4027,7 +4027,7 @@ GameObject:
   - component: {fileID: 1074886883}
   - component: {fileID: 1074886882}
   m_Layer: 0
-  m_Name: Terrain (3)
+  m_Name: Terrain4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4103,7 +4103,7 @@ GameObject:
   - component: {fileID: 1084420047}
   - component: {fileID: 1084420046}
   m_Layer: 0
-  m_Name: Terrain (1)
+  m_Name: Terrain2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4276,7 +4276,7 @@ GameObject:
   - component: {fileID: 1130176818}
   - component: {fileID: 1130176817}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: NameInputCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4293,8 +4293,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1165697054}
   - {fileID: 1564543326}
+  - {fileID: 1165697054}
   m_Father: {fileID: 1038041072}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4414,7 +4414,7 @@ GameObject:
   - component: {fileID: 1158423101}
   - component: {fileID: 1158423100}
   m_Layer: 5
-  m_Name: Image
+  m_Name: p1w1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4490,7 +4490,7 @@ GameObject:
   - component: {fileID: 1165697056}
   - component: {fileID: 1165697055}
   m_Layer: 5
-  m_Name: InputField (TMP)
+  m_Name: Player2Input
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4512,7 +4512,7 @@ RectTransform:
   - {fileID: 1630035906}
   - {fileID: 1736027804}
   m_Father: {fileID: 1130176816}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4895,7 +4895,7 @@ GameObject:
   - component: {fileID: 1260056465}
   - component: {fileID: 1260056467}
   m_Layer: 0
-  m_Name: Image (6)
+  m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4986,7 +4986,7 @@ GameObject:
   - component: {fileID: 1301515690}
   - component: {fileID: 1301515689}
   m_Layer: 0
-  m_Name: Canvas
+  m_Name: MainMenuCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5093,7 +5093,7 @@ GameObject:
   - component: {fileID: 1321067883}
   - component: {fileID: 1321067882}
   m_Layer: 0
-  m_Name: Image
+  m_Name: Logo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5264,7 +5264,7 @@ GameObject:
   - component: {fileID: 1359567074}
   - component: {fileID: 1359567073}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: p1w2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5369,7 +5369,7 @@ GameObject:
   - component: {fileID: 1425035579}
   - component: {fileID: 1425035578}
   m_Layer: 5
-  m_Name: Image
+  m_Name: BackgroundOpaque
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5464,7 +5464,7 @@ GameObject:
   - component: {fileID: 1564543328}
   - component: {fileID: 1564543327}
   m_Layer: 5
-  m_Name: InputField (TMP) (1)
+  m_Name: Player1Input
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5486,7 +5486,7 @@ RectTransform:
   - {fileID: 1902174469}
   - {fileID: 916738105}
   m_Father: {fileID: 1130176816}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5641,7 +5641,7 @@ GameObject:
   - component: {fileID: 1573173897}
   - component: {fileID: 1573173899}
   m_Layer: 0
-  m_Name: Image (2)
+  m_Name: A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5837,7 +5837,7 @@ GameObject:
   - component: {fileID: 1630035908}
   - component: {fileID: 1630035907}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: InputBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6098,7 +6098,7 @@ GameObject:
   - component: {fileID: 1902174471}
   - component: {fileID: 1902174470}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: InputBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6173,7 +6173,7 @@ GameObject:
   - component: {fileID: 1905739013}
   - component: {fileID: 1905739012}
   m_Layer: 0
-  m_Name: Terrain (7)
+  m_Name: Terrain8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6383,7 +6383,7 @@ GameObject:
   - component: {fileID: 2026438823}
   - component: {fileID: 2026438822}
   m_Layer: 5
-  m_Name: Image (5)
+  m_Name: p3w3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6459,7 +6459,7 @@ GameObject:
   - component: {fileID: 2027284580}
   - component: {fileID: 2027284582}
   m_Layer: 0
-  m_Name: Image (1)
+  m_Name: S
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6785,7 +6785,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 06b003d75ed3a2943b87930bdc8a4f7a, type: 2}
     - target: {fileID: 6586409701906331481, guid: 45cf9f140f6b29446ae0bfeae61192b4, type: 3}
       propertyPath: motorForce
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6586409701906331481, guid: 45cf9f140f6b29446ae0bfeae61192b4, type: 3}
       propertyPath: WallPrefab
@@ -6853,7 +6853,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6586409701906331482, guid: 45cf9f140f6b29446ae0bfeae61192b4, type: 3}
       propertyPath: m_UseGravity
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6586409701906331484, guid: 45cf9f140f6b29446ae0bfeae61192b4, type: 3}
       propertyPath: m_LocalPosition.x

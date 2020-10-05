@@ -15,10 +15,6 @@ public class CycleController : MonoBehaviour
 
     [SerializeField] Transform frontTransform;
     [SerializeField] Transform rearTransform;
-    [SerializeField] WheelCollider frontLeftCollider;
-    [SerializeField] WheelCollider frontRightCollider;
-    [SerializeField] WheelCollider rearLeftCollider;
-    [SerializeField] WheelCollider rearRightCollider;
 
     [SerializeField] AudioClip deathFX;
 
@@ -97,9 +93,9 @@ public class CycleController : MonoBehaviour
 
     private void SpawnWall()
     {
-        if (transform.InverseTransformDirection(rb.velocity).z > 0)
+        if (verticalInput > 0)
         {
-            GameObject go = Instantiate(WallPrefab, transform.localPosition - (transform.forward*(1+WallPrefab.transform.localScale.z)), transform.rotation);
+            GameObject go = Instantiate(WallPrefab, transform.localPosition - (transform.forward * (1+(WallPrefab.transform.localScale.z/2))), transform.rotation);
             go.GetComponent<MeshRenderer>().material = playerMaterial;
             walls.Enqueue(go);
             if (walls.Count > numberOfWalls)
