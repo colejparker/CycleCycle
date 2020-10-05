@@ -155,7 +155,7 @@ WheelCollider:
     m_AsymptoteSlip: 0.5
     m_AsymptoteValue: 0.75
     m_Stiffness: 1
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!1 &4636108729599156090
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,7 +216,7 @@ WheelCollider:
     m_AsymptoteSlip: 0.5
     m_AsymptoteValue: 0.75
     m_Stiffness: 1
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!1 &4809592008771745944
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,7 +499,7 @@ WheelCollider:
     m_AsymptoteSlip: 0.5
     m_AsymptoteValue: 0.75
     m_Stiffness: 1
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!1 &6586409701372008059
 GameObject:
   m_ObjectHideFlags: 0
@@ -623,7 +623,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 6586409701495057870}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
@@ -725,7 +725,7 @@ WheelCollider:
     m_AsymptoteSlip: 0.5
     m_AsymptoteValue: 0.75
     m_Stiffness: 1
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!1 &6586409701703633949
 GameObject:
   m_ObjectHideFlags: 0
@@ -840,6 +840,7 @@ MonoBehaviour:
   horizontalInput: 0
   verticalInput: 0
   nameString: 
+  opposingPlayer: {fileID: 0}
   frontTransform: {fileID: 6586409702516643230}
   rearTransform: {fileID: 6586409701495057869}
   frontLeftCollider: {fileID: 6586409701033387742}
@@ -854,7 +855,7 @@ MonoBehaviour:
   motorcycleObject: {fileID: 6586409701520717750}
   deathParticles: {fileID: 8036717216177198165, guid: eea5be798fb1e484faf55ff52c20b257, type: 3}
   scoreCanvas: {fileID: 0}
-  deaths: []
+  wins: []
   up: 0
   down: 0
   right: 0
@@ -1261,7 +1262,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 6586409702516643231}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1

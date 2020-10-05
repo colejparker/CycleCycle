@@ -1898,6 +1898,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6586409701906331481, guid: 45cf9f140f6b29446ae0bfeae61192b4, type: 3}
+      propertyPath: wins.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6586409701906331481, guid: 45cf9f140f6b29446ae0bfeae61192b4, type: 3}
       propertyPath: up
       value: 273
       objectReference: {fileID: 0}
@@ -1927,7 +1931,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6586409701906331481, guid: 45cf9f140f6b29446ae0bfeae61192b4, type: 3}
       propertyPath: motorForce
-      value: 5000
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6586409701906331481, guid: 45cf9f140f6b29446ae0bfeae61192b4, type: 3}
       propertyPath: maxSteeringAngle
@@ -1965,9 +1969,25 @@ PrefabInstance:
       propertyPath: opposingPlayer
       value: 
       objectReference: {fileID: 984381682}
+    - target: {fileID: 6586409701906331481, guid: 45cf9f140f6b29446ae0bfeae61192b4, type: 3}
+      propertyPath: wins.Array.data[0]
+      value: 
+      objectReference: {fileID: 92144370}
+    - target: {fileID: 6586409701906331481, guid: 45cf9f140f6b29446ae0bfeae61192b4, type: 3}
+      propertyPath: wins.Array.data[1]
+      value: 
+      objectReference: {fileID: 1049905214}
+    - target: {fileID: 6586409701906331481, guid: 45cf9f140f6b29446ae0bfeae61192b4, type: 3}
+      propertyPath: wins.Array.data[2]
+      value: 
+      objectReference: {fileID: 2026438822}
     - target: {fileID: 6586409701906331482, guid: 45cf9f140f6b29446ae0bfeae61192b4, type: 3}
       propertyPath: m_Constraints
       value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 6586409701906331482, guid: 45cf9f140f6b29446ae0bfeae61192b4, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6586409701906331484, guid: 45cf9f140f6b29446ae0bfeae61192b4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5331,7 +5351,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1401170984}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.64, y: 1.2700005, z: -14.41}
+  m_LocalPosition: {x: -12.64, y: 3.8400004, z: -14.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6740,6 +6760,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6586409701906331481, guid: 45cf9f140f6b29446ae0bfeae61192b4, type: 3}
+      propertyPath: wins.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6586409701906331481, guid: 45cf9f140f6b29446ae0bfeae61192b4, type: 3}
       propertyPath: up
       value: 119
       objectReference: {fileID: 0}
@@ -6761,7 +6785,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 06b003d75ed3a2943b87930bdc8a4f7a, type: 2}
     - target: {fileID: 6586409701906331481, guid: 45cf9f140f6b29446ae0bfeae61192b4, type: 3}
       propertyPath: motorForce
-      value: 5000
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6586409701906331481, guid: 45cf9f140f6b29446ae0bfeae61192b4, type: 3}
       propertyPath: WallPrefab
@@ -6807,6 +6831,18 @@ PrefabInstance:
       propertyPath: opposingPlayer
       value: 
       objectReference: {fileID: 768652141}
+    - target: {fileID: 6586409701906331481, guid: 45cf9f140f6b29446ae0bfeae61192b4, type: 3}
+      propertyPath: wins.Array.data[0]
+      value: 
+      objectReference: {fileID: 1158423100}
+    - target: {fileID: 6586409701906331481, guid: 45cf9f140f6b29446ae0bfeae61192b4, type: 3}
+      propertyPath: wins.Array.data[1]
+      value: 
+      objectReference: {fileID: 1359567073}
+    - target: {fileID: 6586409701906331481, guid: 45cf9f140f6b29446ae0bfeae61192b4, type: 3}
+      propertyPath: wins.Array.data[2]
+      value: 
+      objectReference: {fileID: 116603759}
     - target: {fileID: 6586409701906331482, guid: 45cf9f140f6b29446ae0bfeae61192b4, type: 3}
       propertyPath: m_Constraints
       value: 64
@@ -6825,7 +6861,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6586409701906331484, guid: 45cf9f140f6b29446ae0bfeae61192b4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.27
+      value: 3.84
       objectReference: {fileID: 0}
     - target: {fileID: 6586409701906331484, guid: 45cf9f140f6b29446ae0bfeae61192b4, type: 3}
       propertyPath: m_LocalPosition.z

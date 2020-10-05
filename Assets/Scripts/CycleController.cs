@@ -72,8 +72,26 @@ public class CycleController : MonoBehaviour
         {
             SpawnWall();
             GetInput();
-            HandleMotor();
-            HandleSteering();
+            MoveBike();
+            //HandleMotor();
+            //HandleSteering();
+        }
+    }
+
+    private void MoveBike()
+    {
+        Ray ray = new Ray(transform.position, -transform.up);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit, 3f))
+        {
+            Debug.DrawLine(transform.position, hit.point, Color.red);
+
+            Quaternion rotCur = Quaternion.FromToRotation(transform.up, hit.normal) * transform.rotation * Quaternion.Euler(0, maxSteeringAngle * horizontalInput, 0);
+            Vector3 posCur = new Vector3(transform.position.x, hit.point.y, transform.position.z) + verticalInput*transform.forward*motorForce;
+
+            transform.position = Vector3.Lerp(transform.position, posCur, Time.deltaTime * 10);
+            transform.rotation = Quaternion.Lerp(transform.rotation, rotCur, Time.deltaTime * 10);
         }
     }
 
@@ -90,21 +108,6 @@ public class CycleController : MonoBehaviour
                 Destroy(wallToRemove);
             }
         }
-    }
-
-    private void HandleSteering()
-    {
-        //float steeringAngle = maxSteeringAngle * horizontalInput;
-        //frontCollider.steerAngle = steeringAngle;
-
-        Quaternion deltaRotation = Quaternion.Euler(new Vector3(0, horizontalInput * maxSteeringAngle, 0) * Time.deltaTime);
-        rb.MoveRotation(rb.rotation * deltaRotation);
-    }
-
-    private void HandleMotor()
-    {
-        //frontCollider.motorTorque = verticalInput * motorForce;
-        rb.AddForce(transform.forward * motorForce*verticalInput);
     }
 
     private void GetInput()
